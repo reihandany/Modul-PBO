@@ -1,0 +1,26 @@
+package com.kendaraan.khusus;
+
+import com.kendaraan.Kendaraan;
+import com.kendaraan.util.ShootAble;
+
+public class Tank extends Kendaraan implements ShootAble {
+    @Override
+    public void Start() {
+        System.out.println("Menyalakan " + this.getName() + " tank");
+    }
+
+    @Override
+    public void Stop() {
+        System.out.println("Mematikan tank " + this.getName());
+    }
+
+    @Override
+    public void Brake() {
+        System.out.println("Tank " + this.getName() + " berhenti");
+    }
+
+    @Override
+    public void Shoot(String vehicle) {
+        System.out.println("Tank " + this.getName() + " menembak " + vehicle);
+    }
+}
